@@ -12,6 +12,7 @@ let inputPrice = document.getElementById("inputPrice")
 
 let injectHistory = document.getElementById("injectHistory")
 let injectModal = document.getElementById("injectModal")
+let putBudgetHere = document.getElementById("putBudgetHere")
 
 
 
@@ -24,19 +25,23 @@ console.log(
 
 updateBudgetBtn.addEventListener('click', function () {
     savelocalStorageBudget(budget.value)
+    putBudgetHere.innerText = `$${getlocalStorageBudget()}`
     LoadBudget()
 })
 
 
 addExpensesBtn.addEventListener('click', function () {
 
-    let item = inputItem.value
-    let price = inputPrice.value
+    if (inputItem.value !== "" && inputPrice.value !== "") {
+        let item = inputItem.value
+        let price = inputPrice.value
 
 
-    savelocalStorage(item, price)
-    printAll()
-    LoadBudget()
+        savelocalStorage(item, price)
+        printAll()
+        LoadBudget()
+    }
+
 
 
 })
@@ -46,10 +51,27 @@ function printAll() {
     injectModal.textContent = ""
     let item = getlocalStorage()
     let price = getlocalStoragePrice()
+    putBudgetHere.innerText = `$${getlocalStorageBudget()}`
+
+
+
+
     injectHistory
     for (let i = 0; i < item.length; i++) {
         createRemoveExpenses(item[i], price[i])
     }
+
+
+
+    // let span1 = document.createElement("span")
+    // span1.className = "d-flex justify-content-between addBorderBudget"
+    // let p11 = document.createElement("p")
+    // p11.textContent = "Budget"
+    // let p21 = document.createElement("p")
+    // p21.textContent = `$${getlocalStorageBudget()}`
+    // span1.appendChild(p11)
+    // span1.appendChild(p21)
+    // injectHistory.appendChild(span1)
 }
 
 function LoadBudget() {
@@ -64,7 +86,7 @@ function LoadBudget() {
     }
 
 
-    displayMoney.innerText = number
+    displayMoney.innerText = `$${number}`
 }
 
 function createRemoveExpenses(item, money) {

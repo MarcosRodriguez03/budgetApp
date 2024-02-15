@@ -9,9 +9,16 @@
 }
 
 .addBorderGood {
+    margin-bottom: 20px;
     border-bottom: 2px green solid;
 }
 
 .addBorderBad {
+    margin-bottom: 20px;
     border-bottom: 2px red solid;
+}
+
+.addBorderBudget {
+    margin-bottom: 40px;
+    border-bottom: 2px rgb(114, 114, 114) solid;
 }
