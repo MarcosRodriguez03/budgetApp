@@ -1,0 +1,17 @@
+.adjustBtn {
+    font-size: 30px;
+    width: 75%;
+
+}
+
+.removeBtnCSS {
+    width: 100%;
+}
+
+.addBorderGood {
+    border-bottom: 2px green solid;
+}
+
+.addBorderBad {
+    border-bottom: 2px red solid;
+}

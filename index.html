@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/styles.css">
+</head>
+
+<body>
+
+
+    <p style="font-size: 24px; margin: 20px;" class="text-center">Get Yo Money Up</p>
+    <p style="font-size: 50px; border-top: 1px solid black; border-bottom: solid black 1px; margin: 20px ;"
+        class="text-center" id="displayMoney">0.00
+    </p>
+
+    <div class="text-center" style="padding: 20px 0px; border-bottom: 3px black solid;">
+        <!-- Button trigger modal -->
+        <div>
+            <button type="button" class="btn btn-success adjustBtn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Update Budget
+            </button>
+        </div>
+
+        <div style="margin: 30px 0px;">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary  adjustBtn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal2">
+                Manage Expenses
+            </button>
+        </div>
+
+        <div>
+            <!-- Button trigger modal -->
+            <button id="AddBtn" type="button" class="btn btn-danger adjustBtn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal3">
+                Add Expenses
+            </button>
+        </div>
+
+    </div>
+
+
+    <div id="injectHistory" class="text-center mx-3">
+        <!--  -->
+        <span class="d-flex justify-content-between addBorderGood">
+            <p>Removed Chrome</p>
+            <p>+10</p>
+        </span>
+        <span class="d-flex justify-content-between addBorderBad">
+            <p>Add Chrome</p>
+            <p>-10</p>
+        </span>
+        <!--  -->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Update you money here</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <input type="number" id="budget" placeholder="get your money up">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="updateBudgetBtn" type="button" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Manage Expenses</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="margin: 0px 50px;" id="injectModal">
+                    <!-- copy mee------------------------------------------------------------ -->
+                    <div>
+                        <span class="d-flex justify-content-between">
+                            <p>netflix</p>
+                            <p>-6</p>
+                        </span>
+                        <button class="btn btn-danger removeBtnCSS">
+                            remove expenses
+                        </button>
+                    </div>
+                    <!-- copy mee end------------------------------------------------------------ -->
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 3-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Expenses</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span class="d-flex justify-content-between">
+                        <input id="inputItem" type="text" style="width: 45%;">
+                        <input id="inputPrice" type="text" style="width: 45%;">
+                    </span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="addExpensesBtn" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script type="module" src="./scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
