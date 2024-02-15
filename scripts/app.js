@@ -61,7 +61,6 @@ function LoadBudget() {
 
     for (let i = 0; i < price.length; i++) {
         number -= price[i]
-
     }
 
 
@@ -77,7 +76,7 @@ function createRemoveExpenses(item, money) {
     let p1 = document.createElement("p")
     p1.textContent = item
     let p2 = document.createElement("p")
-    p2.textContent = money
+    p2.textContent = `-${money}`
 
     let button = document.createElement("button")
     button.className = "btn btn-danger removeBtnCSS"
@@ -103,7 +102,7 @@ function createRemoveExpenses(item, money) {
     let p11 = document.createElement("p")
     p11.textContent = item
     let p21 = document.createElement("p")
-    p21.textContent = money
+    p21.textContent = `-${money}`
 
     span1.appendChild(p11)
     span1.appendChild(p21)
@@ -118,7 +117,7 @@ function createGoodHistory(item, money) {
     let p1 = document.createElement("p")
     p1.textContent = item
     let p2 = document.createElement("p")
-    p2.textContent = money
+    p2.textContent = `+${money}`
 
     span.appendChild(p1)
     span.appendChild(p2)

@@ -54,6 +54,21 @@ const removeFromLocalStorage = (digimon) => {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const savelocalStorageBudget = (digimon) => {
 
     localStorage.setItem("Budget", JSON.stringify(digimon))
